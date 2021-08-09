@@ -1,0 +1,28 @@
+<label>Server Name</label>
+<!-- <input 
+    type="text" 
+    class="form-control"
+    (input)="onUpdateServerName($event)"> -->
+
+<input 
+    type="text" 
+    class="form-control"
+    [(ngModel)]="serverName">
+<!-- <p>{{ serverName }}</p> -->
+<button 
+    class="btn btn-primary" 
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()">Add Server</button>
+<!-- Square brackets indicate to Angular that we're using property binding and we want to dynamically bind some property. -->
+<!-- Disabled is an HTML attribute. DOM (Document Object Model). By using square brackets we are directly binding to this native disabled property that this html element has. -->
+
+<!-- <p>{{allowNewServer}}</p> -->
+<!-- String Interpolation - If you want to output something in your template and print some text to it use String Interpolation -->
+
+<!-- <p [innerText]="allowNewServer"></p>     -->
+<!-- Property Binding - If you want to change some property of an HTML element or a directive or component use Property Binding -->
+
+<p>{{serverCreationStatus}}</p>
+
+<app-server></app-server>
+<app-server></app-server>
